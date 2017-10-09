@@ -1,0 +1,7 @@
+// hailong:
+enclave {
+    trusted {
+        public void ecall_memcpy_in([in,size=len] const char *mem, size_t len);
+    };
+};
+
