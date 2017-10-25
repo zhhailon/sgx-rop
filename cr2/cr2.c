@@ -16,7 +16,7 @@ static int get_cr2(struct seq_file *m, void *v) {
             : /* no input */
             : "%rax"
             ); 
-    seq_printf(m, "%llx\n", cr2);
+    seq_printf(m, "0x%llx\n", cr2);
 #elif defined(__i386__)
     /* not implemented */
 #endif
