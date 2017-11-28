@@ -1,11 +1,43 @@
 extern "C" {
-void foo() {}
+
+char *shadowstack = NULL;
+char *shadowrsp = NULL;
+
+void checkheapexistence()
+{
+	if(shadowstack == NULL)
+	{
+		shadowstack = (char*)malloc(1000);
+		shadowrsp = shadowstack;
+	}
+}
+
+void checkrsp()
+{
+
+}
+
+
+
 
 void heap_stack_push() {
-	foo();
+	checkheapexistence();
+
+
+
 }
 
 void heap_stack_pop() {
-	foo();
+	checkheapexistence();
+	checkrsp();
+
+
+
+
 }
+
 }
+
+
+
+
