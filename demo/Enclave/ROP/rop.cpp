@@ -5,6 +5,7 @@ extern "C" {
 #endif
 
 	// rdi: 1: rax, 2: rbx, 0: others
+	int which_reg = 0;
 	char *shadowstack = 0;
 	char *shadowrsp = 0;
 
@@ -22,8 +23,9 @@ extern "C" {
 
 	}
 
-	void heap_stack_push() {
+	void heap_stack_push(int a) {
         printf("push\n");
+        printf("%x\n", a);
 		checkheapexistence();
 	}
 

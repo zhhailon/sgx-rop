@@ -204,6 +204,14 @@ Enclave/ROP/rop.o: Enclave/ROP/rop.cpp
 	@gcc -fPIC -c $< -o $@
 	@echo "GCC  <=  $<"
 
+# Enclave/BufferOverflow/Mem.o: Enclave/BufferOverflow/Mem.cpp
+# 	@gcc $(Enclave_Cpp_Flags) -c $< -o $@
+# 	@echo "CXX  <=  $<"
+
+Enclave/Enclave.o: Enclave/Enclave.cpp
+	@gcc $(Enclave_Cpp_Flags) -c $< -o $@
+	@echo "CXX  <=  $<"
+
 Enclave/%.o: Enclave/%.cpp
 	@$(CXX) $(Enclave_Cpp_Flags) -c $< -o $@
 	@echo "CXX  <=  $<"
