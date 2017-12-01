@@ -2,3 +2,7 @@
 	path = llvm
 	url = https://github.com/zhhailon/llvm.git
 	branch = release_40_sgxrop
+[submodule "linux-sgx"]
+	path = linux-sgx
+	url = https://github.com/zhhailon/linux-sgx.git
+	branch = sgx_1.7_rop
