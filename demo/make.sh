@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export CC=`pwd`/../llvm/build/bin/clang
-export CXX=`pwd`/../llvm/build/bin/clang++
+export CC=`pwd`/../build/bin/clang
+export CXX=`pwd`/../build/bin/clang++
 make clean
 make
 rm mem.S rop.S enclave.S
